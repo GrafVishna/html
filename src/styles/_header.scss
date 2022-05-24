@@ -35,11 +35,37 @@
       & .link__menu {
          font-weight: 600;
          line-height: calc(22 / 16 * 100%);
+         &:before, &:after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 0%;
+            background-color: rgba(255, 255, 255, 0.712);
+            box-shadow: 0 0px 10px rgba(255, 255, 255, 0.712);
+            transition: 0.2s ease-in-out;
+            border-radius: 2px;
+         }
+         &:after {
+            bottom: -5px;
+            left: 0;
+         }
+         &:before {
+            top: -5px;
+            right: 0;
+         }
+         &:hover:after {
+            width: 100%;
+            transition: 0.2s ease-in-out;
+         }
+         &:hover:before {
+            width: 100%;
+            transition: 0.2s ease-in-out;
+         }
       }
-      & .link__menu:hover {
-         text-shadow: 0 0 15px #fff;
-         transition: all ease 0.15s;
-      }
+      // & .link__menu:hover {
+      //    text-shadow: 0 0 15px #fff;
+      //    transition: all ease 0.15s;
+      // }
    }
 }
 .burger {

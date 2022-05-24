@@ -112,6 +112,7 @@ body.lock {
 }
 
 .__btn {
+  cursor: pointer;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -136,7 +137,11 @@ body.lock {
 }
 
 .__btn:hover {
-  background: #709ae2;
+  background: #061e49;
+}
+
+.__btn:hover a {
+  color: #ffffff;
 }
 
 .__title {
@@ -251,11 +256,43 @@ body.lock {
   line-height: 137.5%;
 }
 
-.menu__links .menu__link .link__menu:hover {
-  text-shadow: 0 0 15px #fff;
-  -webkit-transition: all ease 0.15s;
-  -o-transition: all ease 0.15s;
-  transition: all ease 0.15s;
+.menu__links .menu__link .link__menu:before,
+.menu__links .menu__link .link__menu:after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0%;
+  background-color: rgba(255, 255, 255, 0.712);
+  -webkit-box-shadow: 0 0px 10px rgba(255, 255, 255, 0.712);
+  box-shadow: 0 0px 10px rgba(255, 255, 255, 0.712);
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  border-radius: 2px;
+}
+
+.menu__links .menu__link .link__menu:after {
+  bottom: -5px;
+  left: 0;
+}
+
+.menu__links .menu__link .link__menu:before {
+  top: -5px;
+  right: 0;
+}
+
+.menu__links .menu__link .link__menu:hover:after {
+  width: 100%;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.menu__links .menu__link .link__menu:hover:before {
+  width: 100%;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .burger {
@@ -277,7 +314,7 @@ body.lock {
 
 .inteligence {
   padding-top: 49px;
-  background-color: rgba(4, 19, 44, 0.0941176471);
+  background-color: rgba(4, 19, 44, 0.2549019608);
 }
 
 .inteligence.section__conteiner {
@@ -308,9 +345,6 @@ body.lock {
   content: "";
   width: 110%;
   height: 100%;
-  background: -webkit-gradient(linear, right top, left top, color-stop(36%, rgba(2, 10, 24, 0)), color-stop(44%, rgba(2, 10, 24, 0.5130427171)), color-stop(51%, rgba(2, 10, 24, 0.7651435574)));
-  background: -o-linear-gradient(right, rgba(2, 10, 24, 0) 36%, rgba(2, 10, 24, 0.5130427171) 44%, rgba(2, 10, 24, 0.7651435574) 51%);
-  background: linear-gradient(270deg, rgba(2, 10, 24, 0) 36%, rgba(2, 10, 24, 0.5130427171) 44%, rgba(2, 10, 24, 0.7651435574) 51%);
   position: absolute;
   z-index: -1;
   top: 0;
@@ -318,7 +352,6 @@ body.lock {
 }
 
 .inteligence__text {
-  text-shadow: 0 0 50px #020a18, 0 0 30px #020a18, 0 0 10px #020a18, 0 0 5px #020a18;
   max-width: 604px;
 }
 
@@ -384,6 +417,60 @@ body.lock {
   height: 100%;
 }
 
+.more__conteiner {
+  min-height: 669px;
+}
+
+.more__body {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  min-height: 669px;
+}
+
+.more__img {
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: -100px;
+  max-width: 725px;
+  min-height: 100%;
+  -webkit-transition: 0.1s ease-in-out;
+  -o-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+.more__content {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 484px;
+  flex: 0 1 484px;
+  -webkit-transition: 0.4s ease-in-out;
+  -o-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+.more__title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 52px;
+  margin-bottom: 30px;
+}
+
+.more__text {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  margin-bottom: 50px;
+}
+
 .conteiner__footer {
   height: 60px;
   display: -webkit-box;
@@ -396,6 +483,12 @@ body.lock {
   -ms-flex-align: center;
   align-items: center;
   font-size: 15px;
+}
+
+@media (max-width: 1044px) {
+  .more__img {
+    opacity: 0.5;
+  }
 }
 
 @media (max-width: 900px) {
@@ -489,6 +582,22 @@ body.lock {
   .menu.active {
     left: 0;
   }
+
+  .more__body {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .more__content {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 80%;
+    flex: 0 1 80%;
+  }
+
+  .more__img {
+    opacity: 0.3;
+  }
 }
 
 @media (max-width: 640px) {
@@ -532,6 +641,17 @@ body.lock {
 
   .inteligence__batton .__btn:not(:last-child) {
     margin-bottom: 15px;
+  }
+
+  .more__content {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+  }
+
+  .more__content .__btn {
+    display: block;
+    width: 100%;
   }
 }
 

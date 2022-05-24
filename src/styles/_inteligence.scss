@@ -1,6 +1,6 @@
 .inteligence {
    padding-top: 49px;
-   background-color: #04132c18;
+   background-color: #04132c41;
    &.section__conteiner {
       padding-bottom: 45px;
    }
@@ -17,12 +17,6 @@
          content: "";
          width: 110%;
          height: 100%;
-         background: linear-gradient(
-            270deg,
-            rgba(2, 10, 24, 0) 36%,
-            rgba(2, 10, 24, 0.5130427170868348) 44%,
-            rgba(2, 10, 24, 0.7651435574229692) 51%
-         );
          position: absolute;
          z-index: -1;
          top: 0;
@@ -31,7 +25,6 @@
    }
 
    &__text {
-      text-shadow: 0 0 50px $collor1, 0 0 30px $collor1, 0 0 10px $collor1, 0 0 5px $collor1;
       max-width: 604px;
       & p {
          text-transform: uppercase;

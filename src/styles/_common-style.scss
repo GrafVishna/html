@@ -20,6 +20,7 @@ body {
    margin: 0 auto;
 }
 .__btn {
+   cursor: pointer;
    display: inline-flex;
    justify-content: center;
    align-items: center;
@@ -34,7 +35,10 @@ body {
    border-radius: 7px;
    transition: all 0.3s ease;
    &:hover {
-      background: #709ae2;
+      background: #061e49;
+   }
+   &:hover a {
+      color: #ffffff;
    }
 }
 .__title {
