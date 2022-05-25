@@ -1,7 +1,7 @@
 .more {
 
     &__conteiner {
-        min-height: 669px;
+        margin-top: 130px;
     }
 
     &__body {
@@ -11,43 +11,35 @@
         align-items: center;
         position: relative;
         min-height: 669px;
+        padding: 20px 0;   
     }
 
     &__img {
+        min-height: 649px;
+        max-height: 669px;
         position: absolute;
         z-index: -1;
-        top: 0px;
         left: -100px;
-        max-width: 725px;
-        min-height: 100%;
-        transition: 0.1s ease-in-out;
-    }
+        top: 0;
+        transition: 0.2s ease-in-out;
+        & img {
+            height: 100%;            
+        }
+     }
 
     &__content {
-        flex: 0 1 484px;
-        transition: 0.4s ease-in-out;
+        flex: 0 1 500px;
+        transition: 0.3s ease-in-out;
     }
 
     &__title {
-        font-size: 40px;
-        font-weight: 700;
-        line-height: 52px;
         margin-bottom: 30px;
     }
 
     &__text {
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 26px;
-        margin-bottom: 50px;
-    }
-    & .__conteiner {
-    }
-
-    & .__title2 {
-    }
-
-    & .__text2 {
+        margin-bottom: 50px;  
+        text-align: justify;
+        max-width: 460px;
     }
 }
 
@@ -56,10 +48,16 @@
         &__img {
             opacity: 0.5;
         }
+        &__conteiner {
+            margin-top: 40px;
+        }
     }
 }
 @media (max-width: 900px) {
     .more {
+        &__body {
+            min-height: 569px;
+        }
         &__body{
             justify-content: center;
         }
@@ -67,7 +65,11 @@
             flex: 0 1 80%;
         }
         &__img {
+            min-height: 569px;
             opacity: 0.3;
+        }
+        &__text {
+                max-width: 100%;
         }
     }
 }
@@ -79,6 +81,19 @@
                 display: block;
                 width: 100%;
              }
-        } 
+        }
+    }
+}
+@media (max-width: 350px) {
+    .more {
+        &__conteiner {
+            margin-top: 10px;
+        }
+        &__title {
+            & h2 {
+                font-size: 30px;                
+            }
+        }
+        
     }
 }

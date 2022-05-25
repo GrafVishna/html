@@ -1,5 +1,5 @@
 .inteligence {
-   padding-top: 49px;
+   padding-top: 100px;
    background-color: #04132c41;
    &.section__conteiner {
       padding-bottom: 45px;
@@ -13,15 +13,6 @@
       align-items: start;
       justify-content: center;
       z-index: 1;
-      &::after {
-         content: "";
-         width: 110%;
-         height: 100%;
-         position: absolute;
-         z-index: -1;
-         top: 0;
-         left: -30px;
-      }
    }
 
    &__text {
@@ -42,6 +33,7 @@
          font-size: 55px;
          font-weight: 800;
          line-height: 71px;
+         transition: 0.2s ease-in-out;
       }
    }
 
@@ -50,6 +42,7 @@
       font-weight: 500;
       line-height: 29px;
       margin-bottom: 50px;
+      color: rgb(189, 186, 186);
    }
 
    &__btn1 {
@@ -64,6 +57,7 @@
       top: 0;
       width: 632px;
       height: 634px;
+      transition: 0.2s ease-in-out;
    }
 }
 
@@ -85,6 +79,25 @@
    }
 }
 
+@media (max-width: 1078px) {
+   .inteligence {
+      &__img {
+         z-index: -1;
+         opacity: 0.5;
+      }
+   }
+}
+@media (max-width: 900px) {
+   .intelligence__logo {
+      padding: 89px 0 60px 0;
+   }
+   .inteligence {
+       &__img {
+           opacity: 0.3;
+       }
+   }
+}
+
 @media (max-width: 640px) {
    .title {
       & h1 {
@@ -99,6 +112,7 @@
    .inteligence__title {
       & h1 {
          font-size: 45px;
+         line-height: 150%;
       }
    }
    .inteligence__batton {
@@ -111,6 +125,7 @@
       grid-template-rows: 1fr 1fr;
       column-gap: 30px;
       row-gap: 30px;
+      padding: 89px 0 50px 0;
    }
 }
 @media (max-width: 550px) {
@@ -132,7 +147,21 @@
    }
 }
 @media (max-width: 350px) {
+   .inteligence {
+      &__content {
+         padding-bottom: 40px;
+      }
+      &__title {
+      margin-bottom: 25px;
+      }
+      & h1 {
+         font-size: 30px;
+         line-height: 150%;
+      }
+   }
    .intelligence__logo {
       column-gap: 30px;
+      padding-top: 20px;
+      padding-bottom: 30px;
    }
 }
