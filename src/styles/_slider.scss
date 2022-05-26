@@ -1,5 +1,5 @@
 .card {
-    padding: 90px 0 117px 0;
+    padding: 90px 0 58px 0;
 
     &__body {
     }
@@ -40,4 +40,14 @@
         font-weight: 500;
         line-height: calc(33 / 19 * 100%);
     }
+}
+@media (max-width: 640px) {
+	.card {
+		padding: 60px 0 28px 0;
+	}
+}
+@media (max-width: 350px) {
+	.card {
+		padding: 20px 0 28px 0;
+	}
 }

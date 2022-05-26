@@ -74,6 +74,11 @@
         }
     }
 }
+@media (max-width: 640px) {
+    .more {
+		padding-bottom: 60px;
+    }
+}
 @media (max-width: 550px) {
     .more {
         &__content {
@@ -87,6 +92,7 @@
 }
 @media (max-width: 350px) {
     .more {
+		padding-bottom: 30px;
         &__conteiner {
             margin-top: 10px;
         }

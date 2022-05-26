@@ -562,7 +562,7 @@ body.lock {
 }
 
 .card {
-  padding: 90px 0 117px 0;
+  padding: 90px 0 58px 0;
 }
 
 .card__ittem-body {
@@ -610,6 +610,53 @@ body.lock {
   line-height: 173.6842105263%;
 }
 
+.what {
+  padding: 58px 0 0 0;
+}
+
+.what__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-height: 634px;
+  position: relative;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.what__text {
+  max-width: 555px;
+  text-align: justify;
+}
+
+.what__subtitle {
+  max-width: 460px;
+}
+
+.what__subtitle p:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.what__img {
+  position: absolute;
+  right: 0px;
+  top: 0;
+  width: 642px;
+  max-height: 551px;
+  -webkit-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
 .footer {
   background-color: rgba(4, 19, 44, 0.2549019608);
 }
@@ -626,6 +673,13 @@ body.lock {
   align-items: center;
   font-size: 15px;
   height: 60px;
+}
+
+@media (max-width: 1120px) {
+  .what__img {
+    z-index: -1;
+    opacity: 0.5;
+  }
 }
 
 @media (max-width: 1078px) {
@@ -769,6 +823,10 @@ body.lock {
   .more__text {
     max-width: 100%;
   }
+
+  .what__img {
+    opacity: 0.3;
+  }
 }
 
 @media (max-width: 640px) {
@@ -800,6 +858,22 @@ body.lock {
     row-gap: 30px;
     padding: 89px 0 50px 0;
   }
+
+  .more {
+    padding-bottom: 60px;
+  }
+
+  .card {
+    padding: 60px 0 28px 0;
+  }
+
+  .what {
+    padding: 28px 0 0 0;
+  }
+
+  .what__img {
+    right: -50px;
+  }
 }
 
 @media (max-width: 550px) {
@@ -825,6 +899,10 @@ body.lock {
   .more__content .__btn {
     display: block;
     width: 100%;
+  }
+
+  .what__img {
+    right: -100px;
   }
 }
 
@@ -863,11 +941,27 @@ body.lock {
     padding-bottom: 30px;
   }
 
+  .more {
+    padding-bottom: 30px;
+  }
+
   .more__conteiner {
     margin-top: 10px;
   }
 
   .more__title h2 {
+    font-size: 30px;
+  }
+
+  .card {
+    padding: 20px 0 28px 0;
+  }
+
+  .what__title {
+    margin-bottom: 30px;
+  }
+
+  .what__title h2 {
     font-size: 30px;
   }
 }
