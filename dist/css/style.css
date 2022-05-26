@@ -565,10 +565,6 @@ body.lock {
   padding: 90px 0 117px 0;
 }
 
-.card__ittem {
-  text-align: center;
-}
-
 .card__ittem-body {
   display: -webkit-box;
   display: -ms-flexbox;
