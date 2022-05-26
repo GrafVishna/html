@@ -1,7 +1,10 @@
-.conteiner__footer {
-	height: 60px;
+.footer {
+	background-color: $collor3;
+}
+.conteiner__footer {	
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	font-size: 15px;
+	height: 60px;	
 }
